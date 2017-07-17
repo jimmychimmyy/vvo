@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?> 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.*?>
+<?import jimchen.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="jimchen.GUIController">
+    
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    
+    <Label style="-fx-font: NORMAL 20 Tahoma;" text="Valley Vision Inventory"
+               GridPane.columnIndex="0" GridPane.rowIndex="0">
+    </Label>    
+    
+    <TableView fx:id="tableView" GridPane.columnIndex="0"
+               GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS" >
+        
+        <columns>
+            
+            <TableColumn fx:id="brand" text="Brand">
+                
+                <!--
+                <cellValueFactory>
+                      <PropertyValueFactory property="brand" />
+                  </cellValueFactory>
+                  <cellFactory>
+                      <FormattedTableCellFactory alignment="center">
+                      </FormattedTableCellFactory>
+                  </cellFactory> -->
+                  
+            </TableColumn>
+            
+            <TableColumn fx:id="style" text="Style"></TableColumn>
+            <TableColumn fx:id="color" text="Color"></TableColumn>
+            <TableColumn fx:id="size" text="Size"></TableColumn>
+            <TableColumn fx:id="patient" text="Patient"></TableColumn>
+            <TableColumn fx:id="cost"  text="Cost">
+                
+                <cellValueFactory>
+                      <PropertyValueFactory property="brand" />
+                  </cellValueFactory>
+                  <cellFactory>
+                      <FormattedTableCellFactory alignment="RIGHT">
+                      </FormattedTableCellFactory>
+                  </cellFactory>
+                
+            </TableColumn>
+            <TableColumn fx:id="retail" text="My Price">
+                
+                <cellValueFactory>
+                      <PropertyValueFactory property="brand" />
+                  </cellValueFactory>
+                  <cellFactory>
+                      <FormattedTableCellFactory alignment="RIGHT">
+                      </FormattedTableCellFactory>
+                  </cellFactory>
+                
+            </TableColumn>
+            <TableColumn fx:id="soldPrice" text="Sold Price">
+                
+                <cellValueFactory>
+                      <PropertyValueFactory property="brand" />
+                  </cellValueFactory>
+                  <cellFactory>
+                      <FormattedTableCellFactory alignment="RIGHT">
+                      </FormattedTableCellFactory>
+                  </cellFactory>
+                
+            </TableColumn>
+            <TableColumn fx:id="soldDate" text="Sold Date">
+                
+                <cellValueFactory>
+                      <PropertyValueFactory property="brand" />
+                  </cellValueFactory>
+                  <cellFactory>
+                      <FormattedTableCellFactory alignment="RIGHT">
+                      </FormattedTableCellFactory>
+                  </cellFactory>
+                
+            </TableColumn>
+            <TableColumn fx:id="insuranceCov" text="Insurance Coverage">
+                
+                <cellValueFactory>
+                      <PropertyValueFactory property="brand" />
+                  </cellValueFactory>
+                  <cellFactory>
+                      <FormattedTableCellFactory alignment="RIGHT">
+                      </FormattedTableCellFactory>
+                  </cellFactory>
+                
+            </TableColumn>
+            <TableColumn fx:id="notes" prefWidth="300" text="Notes"></TableColumn>
+        </columns>
+        
+        
+    </TableView>
+    
+     <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" 
+             GridPane.rowIndex="2">
+            <TextField fx:id="brandField" promptText="Brand"
+                         prefWidth="160"/>
+            <TextField fx:id="styleField" promptText="Style"
+                         prefWidth="160"/>
+            <TextField fx:id="colorField" promptText="Color"
+                         prefWidth="160"/>
+            <TextField fx:id="sizeField" promptText="Size"
+                         prefWidth="160"/>
+            <TextField fx:id="lastNameField" promptText="Last Name"
+                         prefWidth="160"/>
+            <TextField fx:id="firstNameField" promptText="First Name"
+                         prefWidth="160"/>
+            
+            <Button text="+" prefWidth="80" disable="true"  textAlignment="CENTER" style="-fx-font: NORMAL 15 Tahoma;" onAction="#addConfirmFrame" />
+
+
+      </HBox>
+      
+       <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" 
+             GridPane.rowIndex="3">
+           
+          <TextField fx:id="costField" promptText="Cost"
+                         prefWidth="160" />
+          <TextField fx:id="retailField" promptText="My Price"
+                         prefWidth="160" />
+          <TextField fx:id="soldPriceField" promptText="Sold Price"
+                         prefWidth="160" />
+          <TextField fx:id="soldDateField" promptText="Sold Date"
+                         prefWidth="160" />
+          <TextField fx:id="insuranceField" promptText="Insurance Coverage"
+                         prefWidth="160" />
+          <TextField fx:id="notesField" promptText="Notes"
+                         prefWidth="160" />
+          
+          <Button text="Clear" prefWidth="80" textAlignment="CENTER" style="-fx-font: NORMAL 14 Tahoma;" onAction="#clearEntries" />
+
+
+      </HBox> 
+      
+       <HBox spacing="10" alignment="CENTER" GridPane.columnIndex="0" 
+             GridPane.rowIndex="4">
+           
+           <Label style="-fx-font: NORMAL 12 Tahoma;" text="Fill in fields to narrow search"
+               GridPane.columnIndex="0" GridPane.rowIndex="4">
+           </Label>   
+           
+       </HBox>
+      
+    
+</GridPane>
