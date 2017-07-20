@@ -11,7 +11,7 @@ filepath = os.path.realpath("/Users/jimchen/Development/ValleyVisionInventory/in
 result = os.system('tesseract ' + filepath + ' out')
 print(result)
 
-with open("/Users/jimchen/Desktop/out.txt", "r") as myfile:
+with open("/Users/jimchen/Development/ValleyVisionInventory/out.txt", "r") as myfile:
 	data = list(line for line in (l.decode('UTF-8').strip() for l in myfile) if line)
 	print(data)
 	os.system('rm /Users/jimchen/Development/ValleyVisionInventory/out.txt')
