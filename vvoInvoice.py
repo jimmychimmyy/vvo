@@ -41,6 +41,13 @@ def extractText(path):
 			worksheet.write_string(i, 0, str(string))
 		workbook.close()
 
+		if data[1] in "Luxottica USA LLC":
+			print "Found: Luxottica USA LLC"
+		elif data[0] in "MARCHC) N'": #might want to clarify by checking address as well
+			print "Found: Marchon"
+		elif "SAFILO" in data[5]:
+			print "Found: Safilo"
+
 button = Tk.Button(root, text="Browse", command=browse)
 button.pack()
 
